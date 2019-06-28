@@ -1,0 +1,19 @@
+// proto3で記述
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+service TodoSrv {
+    rpc GetTodo (google.protobuf.Empty) returns (GetTodoResponse);
+}
+
+message Todo{
+    string id = 1;
+    string title = 2;
+    string description = 3;
+}
+//message Request {
+//    string id = 1;
+//}
+message GetTodoResponse {
+    repeated Todo todo = 1;
+}
