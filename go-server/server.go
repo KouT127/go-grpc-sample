@@ -1,8 +1,8 @@
 package main
 
 import (
-	pb "github.com/KouT127/go-grpc-sample/pb/proto"
-	"github.com/KouT127/go-grpc-sample/service"
+	pb "github.com/KouT127/go-grpc-sample/go-server/pb/proto"
+	"github.com/KouT127/go-grpc-sample/go-server/service"
 	"google.golang.org/grpc"
 	"log"
 	"net"

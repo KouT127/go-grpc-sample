@@ -13,15 +13,31 @@ unzip xxx.zip
 ```
 go get -u github.com/golang/protobuf/protoc-gen-go
 ```
+
+## Dart用のPluginをインストール
+Dart用のProtobufのリポジトリーからクローンする
+```bash
+https://github.com/dart-lang/protobuf
+
+cd protobuf/protoc_plugin
+pub install
+```
+上記を実行後、protoc_plugin/binにPATHを通す。
+
 ## ドキュメント用のGenerator
 ```
 go get -u github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc
 ```
 
-
 ## Go生成
 ```bash
-protoc --go_out=plugins=grpc:./pb proto/*.proto
+protoc --go_out=plugins=grpc:./go-server/pb proto/*.proto
+```
+
+## Dart生成
+```bash
+protoc --dart_out=grpc:./flutter_grpc_app/lib/api/pb proto/*.proto
+protoc --dart_out=grpc:./flutter_grpc_app/lib/api/pb types/*.proto
 ```
 
 ## Doc生成

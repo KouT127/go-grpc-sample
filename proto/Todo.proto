@@ -1,6 +1,7 @@
 // proto3で記述
 syntax = "proto3";
-import "google/protobuf/empty.proto";
+
+import "types/empty.proto";
 
 service TodoSrv {
     rpc GetTodo (google.protobuf.Empty) returns (GetTodoResponse);
