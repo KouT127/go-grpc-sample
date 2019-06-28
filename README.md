@@ -2,7 +2,6 @@
 
 ## protocのインストール
 protoファイルからコード生成をするコンパイラ(protoc)をインストールします。
-protocのダウンロードはos別にこちらから
 https://github.com/protocolbuffers/protobuf/
 
 unzip xxx.zip
@@ -11,7 +10,6 @@ unzip xxx.zip
 
 
 ## Go用のGeneratorをインストール
-以下はグローバルが良いかも？
 ```
 go get -u github.com/golang/protobuf/protoc-gen-go
 ```
@@ -30,3 +28,10 @@ protoc --go_out=plugins=grpc:./pb proto/*.proto
 ```bash
 protoc --doc_out=html,index.html:./ proto/*.proto
 ```
+
+## 種類
+キーバリュー map<string,string>      
+任意型 Any     
+配列 repeated　    
+列挙型 enum    
+一つのフィールド　oneof
