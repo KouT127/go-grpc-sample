@@ -17,6 +17,10 @@ func main() {
 	defer conn.Close()
 	client := pb.NewTodoSrvClient(conn)
 	res, err := client.GetTodo(context.TODO(), &empty.Empty{})
-	fmt.Printf("result:%#v \n", res)
+
+	for _, todo := range res.Todo {
+		fmt.Printf("result:%#v \n", todo)
+	}
+
 	fmt.Printf("error::%#v \n", err)
 }

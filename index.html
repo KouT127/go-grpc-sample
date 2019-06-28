@@ -175,22 +175,22 @@
         
           
           <li>
-            <a href="#proto%2fCat.proto">proto/Cat.proto</a>
+            <a href="#proto%2fTodo.proto">proto/Todo.proto</a>
             <ul>
               
                 <li>
-                  <a href="#.GetMyCatMessage"><span class="badge">M</span>GetMyCatMessage</a>
+                  <a href="#.GetTodoResponse"><span class="badge">M</span>GetTodoResponse</a>
                 </li>
               
                 <li>
-                  <a href="#.MyCatResponse"><span class="badge">M</span>MyCatResponse</a>
+                  <a href="#.Todo"><span class="badge">M</span>Todo</a>
                 </li>
               
               
               
               
                 <li>
-                  <a href="#.Cat"><span class="badge">S</span>Cat</a>
+                  <a href="#.TodoSrv"><span class="badge">S</span>TodoSrv</a>
                 </li>
               
             </ul>
@@ -203,12 +203,36 @@
     
       
       <div class="file-heading">
-        <h2 id="proto/Cat.proto">proto/Cat.proto</h2><a href="#title">Top</a>
+        <h2 id="proto/Todo.proto">proto/Todo.proto</h2><a href="#title">Top</a>
       </div>
-      <p></p>
+      <p>proto3で記述</p>
 
       
-        <h3 id=".GetMyCatMessage">GetMyCatMessage</h3>
+        <h3 id=".GetTodoResponse">GetTodoResponse</h3>
+        <p>message Request {</p><p>string id = 1;</p><p>}</p>
+
+        
+          <table class="field-table">
+            <thead>
+              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>todo</td>
+                  <td><a href="#Todo">Todo</a></td>
+                  <td>repeated</td>
+                  <td><p> </p></td>
+                </tr>
+              
+            </tbody>
+          </table>
+
+          
+
+        
+      
+        <h3 id=".Todo">Todo</h3>
         <p></p>
 
         
@@ -219,7 +243,21 @@
             <tbody>
               
                 <tr>
-                  <td>target_cat</td>
+                  <td>id</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>title</td>
+                  <td><a href="#string">string</a></td>
+                  <td></td>
+                  <td><p> </p></td>
+                </tr>
+              
+                <tr>
+                  <td>description</td>
                   <td><a href="#string">string</a></td>
                   <td></td>
                   <td><p> </p></td>
@@ -232,44 +270,13 @@
 
         
       
-        <h3 id=".MyCatResponse">MyCatResponse</h3>
-        <p></p>
-
-        
-          <table class="field-table">
-            <thead>
-              <tr><td>Field</td><td>Type</td><td>Label</td><td>Description</td></tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>name</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-                <tr>
-                  <td>kind</td>
-                  <td><a href="#string">string</a></td>
-                  <td></td>
-                  <td><p> </p></td>
-                </tr>
-              
-            </tbody>
-          </table>
-
-          
-
-        
-      
 
       
 
       
 
       
-        <h3 id=".Cat">Cat</h3>
+        <h3 id=".TodoSrv">TodoSrv</h3>
         <p></p>
         <table class="enum-table">
           <thead>
@@ -278,9 +285,9 @@
           <tbody>
             
               <tr>
-                <td>GetMyCat</td>
-                <td><a href="#GetMyCatMessage">.GetMyCatMessage</a></td>
-                <td><a href="#MyCatResponse">.MyCatResponse</a></td>
+                <td>GetTodo</td>
+                <td><a href="#google.protobuf.Empty">.google.protobuf.Empty</a></td>
+                <td><a href="#GetTodoResponse">.GetTodoResponse</a></td>
                 <td><p></p></td>
               </tr>
             

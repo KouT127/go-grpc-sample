@@ -9,12 +9,9 @@ import (
 type TodoSrv struct {
 }
 
-func (s *TodoSrv) GetMyCat(ctx context.Context, message empty.Empty) (*pb.GetTodoResponse, error) {
-	//if message != empty.Empty {
-	//	return nil, errors.New("Not Found")
-	//}
+func (s *TodoSrv) GetTodo(context.Context, *empty.Empty) (*pb.GetTodoResponse, error) {
 	todo := &pb.Todo{Id: "a", Title: "b", Description: "c"}
-	todoList := []*pb.Todo{todo}
+	todoList := []*pb.Todo{todo, todo, todo}
 	return &pb.GetTodoResponse{
 		Todo: todoList,
 	}, nil
