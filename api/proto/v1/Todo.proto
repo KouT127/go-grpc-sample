@@ -3,7 +3,7 @@ syntax = "proto3";
 
 import "google/empty.proto";
 
-service TodoSrv {
+service TodoService {
     rpc GetTodo (google.protobuf.Empty) returns (GetTodoResponse);
 }
 

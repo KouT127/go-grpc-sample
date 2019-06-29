@@ -36,8 +36,8 @@ protoc --go_out=plugins=grpc:./go-server api/proto/v1/*.proto
 
 ## Dart生成
 ```bash
-protoc --dart_out=grpc:./flutter_grpc_app/lib/api/pb proto/*.proto
-protoc --dart_out=grpc:./flutter_grpc_app/lib/api/pb types/*.proto
+protoc --dart_out=grpc:./flutter_grpc_app/lib google/*.proto
+protoc --dart_out=grpc:./flutter_grpc_app/lib api/proto/v1/*.proto
 ```
 
 ## Doc生成

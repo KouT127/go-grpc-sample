@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 	"fmt"
-	pb "github.com/KouT127/go-grpc-sample/go-server/pb/proto"
+	pb "github.com/KouT127/go-grpc-sample/go-server/api/proto/v1"
 	"github.com/golang/protobuf/ptypes/empty"
 )
 

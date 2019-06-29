@@ -1,7 +1,7 @@
 package main
 
 import (
-	pb "github.com/KouT127/go-grpc-sample/go-server/pb/proto"
+	pb "github.com/KouT127/go-grpc-sample/go-server/api/proto/v1"
 	"github.com/KouT127/go-grpc-sample/go-server/service"
 	"google.golang.org/grpc"
 	"log"
@@ -16,6 +16,6 @@ func main() {
 	server := grpc.NewServer()
 	todoSrv := &service.TodoSrv{}
 	// 実行したい実処理をseverに登録する
-	pb.RegisterTodoSrvServer(server, todoSrv)
+	pb.RegisterTodoServiceServer(server, todoSrv)
 	server.Serve(listenPort)
 }
