@@ -31,7 +31,7 @@ go get -u github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc
 
 ## Go生成
 ```bash
-protoc --go_out=plugins=grpc:./go-server/pb proto/*.proto
+protoc --go_out=plugins=grpc:./go-server api/proto/v1/*.proto
 ```
 
 ## Dart生成
