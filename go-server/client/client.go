@@ -15,7 +15,7 @@ func main() {
 		log.Fatal("client connection error:", err)
 	}
 	defer conn.Close()
-	client := pb.NewTodoSrvClient(conn)
+	client := pb.NewTodoServiceClient(conn)
 	res, err := client.GetTodo(context.TODO(), &empty.Empty{})
 
 	for _, todo := range res.Todo {
